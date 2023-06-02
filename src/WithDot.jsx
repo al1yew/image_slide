@@ -31,30 +31,55 @@ const WithDot = () => {
         };
     }, [chast]);
 
+    // function move(e) {
+    //     e.preventDefault();
+
+    //     const containerRect = container.current.getBoundingClientRect();
+    //     const containerLeft = containerRect.left;
+    //     const containerRight = containerRect.right;
+
+    //     let clientX;
+
+    //     if (e.type === "touchmove") {
+    //         clientX = e.touches[0].clientX;
+    //     } else {
+    //         clientX = e.clientX;
+    //     }
+
+    //     if (clientX >= containerLeft && clientX <= containerRight) {
+    //         const positionX = clientX - containerLeft;
+    //         const containerWidth = containerRight - containerLeft;
+    //         const ratio = 1 - positionX / containerWidth;
+
+    //         setChast(ratio);
+    //         dot.current.style.left = positionX + "px";
+    //     }
+    // }
+
     function move(e) {
         e.preventDefault();
-
+      
         const containerRect = container.current.getBoundingClientRect();
         const containerLeft = containerRect.left;
         const containerRight = containerRect.right;
-
-        let clientX;
-
+      
+        let pageX;
+      
         if (e.type === "touchmove") {
-            clientX = e.touches[0].clientX;
+          pageX = e.touches[0].pageX;
         } else {
-            clientX = e.clientX;
+          pageX = e.pageX;
         }
-
-        if (clientX >= containerLeft && clientX <= containerRight) {
-            const positionX = clientX - containerLeft;
-            const containerWidth = containerRight - containerLeft;
-            const ratio = 1 - positionX / containerWidth;
-
-            setChast(ratio);
-            dot.current.style.left = positionX + "px";
+      
+        if (pageX >= containerLeft && pageX <= containerRight) {
+          const positionX = pageX - containerLeft;
+          const containerWidth = containerRight - containerLeft;
+          const ratio = 1 - positionX / containerWidth;
+      
+          setChast(ratio);
+          dot.current.style.left = positionX + "px";
         }
-    }
+      }
 
     function startDrag(e) {
         e.preventDefault();
