@@ -143,15 +143,15 @@
 }
 .withoutphoto .container .all .elements .element .content span:nth-child(1) {
   position: absolute;
-  top: 20%;
+  top: 40%;
   left: 10%;
   font-size: 40px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .withoutphoto .container .all .elements .element .content span:nth-child(2) {
   position: absolute;
-  width: 30%;
-  top: 40%;
+  width: 100%;
+  top: 50%;
   left: 10%;
   font-size: 20px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -181,9 +181,10 @@
 }
 .withoutphoto .container .all .elements .overlay .content span:nth-child(2) {
   position: absolute;
-  width: 30%;
-  top: 40%;
+  width: 100%;
+  top: 30%;
   right: 10%;
+  text-align: end;
   font-size: 20px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
@@ -209,5 +210,90 @@
   transition: 0.2s;
 }
 .withoutphoto .container .all .elements .dot:hover {
+  opacity: 1;
+}
+
+.withdot {
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  height: 90vh;
+}
+.withdot .container {
+  height: 100%;
+}
+.withdot .container .all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.withdot .container .all p {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+}
+.withdot .container .all .imgcontainer {
+  position: relative;
+  width: 70%;
+  height: 90%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.withdot .container .all .imgcontainer .imgkeeper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.withdot .container .all .imgcontainer .imgkeeper img {
+  width: 100%;
+}
+.withdot .container .all .imgcontainer .overlay {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  right: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.withdot .container .all .imgcontainer .overlay img {
+  width: 100%;
+}
+.withdot .container .all .imgcontainer .dot {
+  position: absolute;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: red;
+  opacity: 0.7;
+  cursor: ew-resize;
+  transition: 0.2s;
+  user-drag: none;
+}
+.withdot .container .all .imgcontainer .dot:hover {
   opacity: 1;
 }/*# sourceMappingURL=App.css.map */

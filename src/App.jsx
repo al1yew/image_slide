@@ -2,12 +2,15 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import WithoutDot from "./WithoutDot";
 import WithoutPhotoAndDot from "./WithoutPhotoAndDot";
-//this must work only on computers, 992px+
+//these must work only on computers, 992px+
+import WithDot from "./WithDot";
+//this must work on phones and comps
 function App() {
     return (
         <main>
             <WithoutDot />
             <WithoutPhotoAndDot />
+            <WithDot />
         </main>
     );
 }
