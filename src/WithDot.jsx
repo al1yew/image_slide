@@ -58,28 +58,28 @@ const WithDot = () => {
 
     function move(e) {
         e.preventDefault();
-      
+
         const containerRect = container.current.getBoundingClientRect();
         const containerLeft = containerRect.left;
         const containerRight = containerRect.right;
-      
+
         let pageX;
-      
+
         if (e.type === "touchmove") {
-          pageX = e.touches[0].pageX;
+            pageX = e.touches[0].pageX;
         } else {
-          pageX = e.pageX;
+            pageX = e.pageX;
         }
-      
+
         if (pageX >= containerLeft && pageX <= containerRight) {
-          const positionX = pageX - containerLeft;
-          const containerWidth = containerRight - containerLeft;
-          const ratio = 1 - positionX / containerWidth;
-      
-          setChast(ratio);
-          dot.current.style.left = positionX + "px";
+            const positionX = pageX - containerLeft;
+            const containerWidth = containerRight - containerLeft;
+            const ratio = 1 - positionX / containerWidth;
+
+            setChast(ratio);
+            dot.current.style.left = positionX + "px";
         }
-      }
+    }
 
     function startDrag(e) {
         e.preventDefault();
